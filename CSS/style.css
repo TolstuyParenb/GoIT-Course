@@ -646,7 +646,6 @@ body {
     font-weight: bold;
     font-size: 17px;
     line-height: 150%;
-    text-align: center;
     margin: 0px;
     color: var(--txt-c-dark);
 }
@@ -654,17 +653,15 @@ body {
 .footer-profession {
     font-size: 17px;
     line-height: 150%;
-    text-align: center;
     color: var(--txt-c-dark);
     margin: 0px;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
 .footer-tel {
     font-weight: bold;
     font-size: 17px;
     line-height: 150%;
-    text-align: center;
     text-decoration: none;
     color: var(--txt-c-dark);
     margin-bottom: 15px;
@@ -673,22 +670,26 @@ body {
 .footer-email {
     font-size: 17px;
     line-height: 150%;
-    text-align: center;
     text-decoration: none;
     color: var(--txt-c-dark);
     margin-bottom: 30px;
 }
 
-.icons {
-    color: var(--txt-c-dark);
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin-left: 30px;
-}
-
 .icon-link {
     text-decoration: none;
     font-size: 25px;
-    padding-right: 30px;
+}
+
+.icon-link:last-child {
+    margin-right: 0px;
+}
+
+.socion-link {
+    padding-right: 35px;
+    text-decoration: none;
+    color: var(--c-dark);
+}
+
+.socion-link:last-child {
+    margin-right: 0px;
 }
