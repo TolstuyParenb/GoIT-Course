@@ -13,6 +13,8 @@
     --txt-c-grey-light: var(--c-grey-light);
     --txt-c-accent: var(--c-accent);
     --txt-c-light: var(--c-light);
+    /* modals */
+    --modal-bgd-dark: rgba(20, 29, 45, 0.8);
     /* font */
     --font-main: "Acrom", sans-serif;
     /* container width */
@@ -48,6 +50,10 @@
     src: local("Acrom Regular"), local("Acrom-Regular"), url("../fonts/acrom/Acrom-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/acrom/Acrom-Regular.woff") format("woff"), url("../fonts/acrom/Acrom-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -94,6 +100,128 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: var(--txt-c-light);
+}
+
+
+/* MODALS */
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    display: block;
+    background: var(--modal-bgd-dark);
+}
+
+.modal-activ {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-mobile-menu {
+    background: var(--c-light);
+}
+
+.modal-mobile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.modal-close-btn {
+    font-size: 18px;
+    position: absolute;
+    color: var(--txt-c-grey);
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.body-scroll-disable {
+    overflow: hidden;
+}
+
+
+/* MOBILE MENU MODAL*/
+
+.mobile-menu-close-btn {
+    background: var(--c-accent);
+    color: var(--c-light);
+    padding: 10px 15px;
+}
+
+.mobile-menu-container {
+    height: 70%;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+.mobile-menu-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-item {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--txt-c-grey);
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.mobile-menu-tel {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 150%;
+    text-decoration: none;
+    color: var(--txt-c-dark);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.mobile-menu-email {
+    font-size: 17px;
+    line-height: 150%;
+    text-decoration: none;
+    color: var(--txt-c-dark);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.mobile-menu-contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* My VIDEO MODAL */
+
+.video-content {
+    width: 100%;
+}
+
+.my-video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    height: 100%;
+}
+
+.my-video-close-btn {
+    background: var(--c-light);
+    color: var(--c-dark);
+    padding: 10px 15px;
 }
 
 

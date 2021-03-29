@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .modal {
+            display: none;
+        }
+    </style>
     <link rel="stylesheet" href="CSS/choices.min.css">
     <link rel="stylesheet" href="CSS/normalize.min.css">
     <link rel="stylesheet" href="CSS/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style.css">
     <title>GoIT cource</title>
+
 </head>
 
 <body>
@@ -21,7 +28,7 @@
             <a href="" class="logo-link"><img src="img/goit-logo.svg" alt="GoIT logo"></a>
             <div class="navigation-part">
                 <a href="" class="hire-me-btn"> — HIRE ME</a>
-                <a href="" class="mobile-menu"><i class="fas fa-bars"></i></a>
+                <a href="" class="mobile-menu" id="mobile-menu-btn"><i class="fas fa-bars"></i></a>
             </div>
         </nav>
         <h1 class="front-page-my-name">[Alex Tur]</h1>
@@ -35,7 +42,7 @@
 
         <p class="front-page-my-description">About me in 2 minutes</p>
 
-        <button class="front-page-my-video-btn"><i class="fas fa-play"></i> PLAY </button>
+        <button class="front-page-my-video-btn" id="my-video-btn"><i class="fas fa-play"></i> PLAY </button>
 
         <img src="img/laptop.svg" alt="laptop" class="front-page-laptop">
 
@@ -105,7 +112,7 @@
 
     <!-- ABOUT PAGE -->
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container container-left">
             <h3 class="section-title about-title">I code things from scratch_</h3>
             <p class="about-descr">
@@ -130,7 +137,7 @@
 
     <!-- PERSONAL PROJECT -->
 
-    <section class="personal-projects">
+    <section class="personal-projects" id="projects">
         <div class="container">
             <h3 class="section-title personal-projects-title">My personal _projects</h3>
 
@@ -257,7 +264,7 @@
 
     <!-- CALCULATOR SECTION -->
 
-    <section class="calculator">
+    <section class="calculator" id="calculator-cost">
         <div class="container">
             <h3 class="calculator-title section-title">
                 Calculate_ the cost of a future project
@@ -276,43 +283,43 @@
                 <div class="calculator-form-input">
                     <label for="calculator-form-website-tipe" class="calculator-form-title">What should be done:</label>
                     <select name="website-tipe" id="calculator-form-website-tipe" class="calculator-form-select">
-                        <option value="landing-page">Lading page</option>
-                        <option value="website" selected>Website</option>
-                        <option value="cms">CMS</option>
-                        <option value="portal">Portal</option>
-                        <option value="e-shop">E-shop</option>
+                        <option value="landing-page:600$">Lading page</option>
+                        <option value="website:1000$" selected>Website</option>
+                        <option value="cms:2000$">CMS</option>
+                        <option value="portal:3000$">Portal</option>
+                        <option value="e-shop:5000">E-shop</option>
                     </select>
                 </div>
                 <div class="calculator-form-input">
                     <label for="calculator-form-technologies" class="calculator-form-title">Choose preferred technologies</label>
                     <select name="technologies" id="calculator-form-technologies" class="calculator-form-select" multiple>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="js">JS</option>
-                        <option value="react">React</option>
-                        <option value="php">PHP</option>
+                        <option selected value="html:500$">HTML</option>
+                        <option selected value="css:500$">CSS</option>
+                        <option selected value="js:700$">JS</option>
+                        <option value="react:1000$">React</option>
+                        <option value="php:2000$">PHP</option>
                     </select>
                 </div>
 
                 <div class="calculator-form-input">
                     <label for="" class="calculator-form-title">Personal account and shopping cart:</label>
 
-                    <div class="calculator-form-input-radio-container">
-                        <input type="radio" class="calculator-form-input-fiel" name="cart-Yes" id="calculator-form-input-cart-Yes">
+                    <div class="calculator-form-input-radio-container" id="calculator-form-input-cart">
+                        <input checked type="radio" class="calculator-form-input-fiel" name="cart" value="Yes" id="calculator-form-input-cart-Yes">
                         <label for="calculator-form-input-cart-Yes" class="calculator-form-input-label">Yes</label>
 
-                        <input type="radio" class="calculator-form-input-fiel" name="cart-No" id="calculator-form-cart-No">
+                        <input type="radio" class="calculator-form-input-fiel" name="cart" value="No" id="calculator-form-input-cart-No">
                         <label for="calculator-form-input-cart-No" class="calculator-form-input-label">No</label>
                     </div>
 
                     <div class="calculator-form-input">
                         <label for="" class="calculator-form-title">Requests reception on your email:</label>
 
-                        <div class="calculator-form-input-radio-container">
-                            <input type="radio" class="calculator-form-input-fiel" name="email-Yes" id="calculator-form-input-email-Yes">
+                        <div class="calculator-form-input-radio-container" id="calculator-form-input-email">
+                            <input checked type="radio" class="calculator-form-input-fiel" name="email" value="Yes" id="calculator-form-input-email-Yes">
                             <label for="calculator-form-input-email-Yes" class="calculator-form-input-label">Yes</label>
 
-                            <input type="radio" class="calculator-form-input-fiel" name="email-No" id="calculator-form-email-No">
+                            <input type="radio" class="calculator-form-input-fiel" name="email" value="No" id="calculator-form-input-email-No">
                             <label for="calculator-form-input-email-No" class="calculator-form-input-label">No</label>
                         </div>
                     </div>
@@ -329,7 +336,7 @@
 
     <!-- FOOTER -->
 
-    <footer class="footer">
+    <footer class="footer" id="footer-contacts">
         <div class="container">
             <h3 class="footer-name">Alex Tur</h3>
             <p class="footer-profession">Frontend Developer</p>
@@ -346,8 +353,40 @@
         </div>
     </footer>
 
+    <!-- MODALS -->
+
+    <div class="modals-wrapper">
+        <!-- MODAL MENU -->
+
+        <div class="modal modal-mobile-menu" id="mobile-menu">
+            <div class="modal-mobile-content">
+                <div class="container mobile-menu-container">
+                    <i class="fas fa-times modal-close-btn mobile-menu-close-btn"></i>
+                    <nav class="mobile-menu-items">
+                        <a class="mobile-menu-item" href="#about">ABOUT</a>
+                        <a class="mobile-menu-item" href="#projects">PROJECTS</a>
+                        <a class="mobile-menu-item" href="#calculator-cost">COST CALCULATOR</a>
+                        <a class="mobile-menu-item" href="#footer-contacts">CONTACTS</a>
+                    </nav>
+                    <div class="mobile-menu-contacts">
+                        <a class="mobile-menu-tel" href="tel:0636077777">+380 63 607 77 77</a>
+                        <a class="mobile-menu-email" href="mailto:tolstuy.paren@gmail.com">tolstuy.paren@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-area-bgd" id="my-video-modal">
+            <div class="my-video-container">
+                <i class="fas fa-times modal-close-btn my-video-close-btn"></i>
+                <video class="video-content modal-area-content" src="video-preview.mp4" controls></video>
+            </div>
+        </div>
+
+    </div>
     <script src="js/choices.min.js"></script>
     <script src="js/calculator.js"></script>
+    <script src="js/modals.js"></script>
 </body>
 
 </html>
