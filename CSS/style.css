@@ -118,7 +118,7 @@ body {
     background: var(--modal-bgd-dark);
 }
 
-.modal-activ {
+.modal-active {
     opacity: 1;
     pointer-events: all;
 }
@@ -128,10 +128,16 @@ body {
 }
 
 .modal-mobile-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%;
+}
+
+.mobile-menu-container {
+    height: 70%;
+    justify-content: space-between;
+    margin: 0px;
 }
 
 .modal-close-btn {
@@ -143,23 +149,10 @@ body {
     cursor: pointer;
 }
 
-.body-scroll-disable {
-    overflow: hidden;
-}
-
-
-/* MOBILE MENU MODAL*/
-
 .mobile-menu-close-btn {
     background: var(--c-accent);
     color: var(--c-light);
     padding: 10px 15px;
-}
-
-.mobile-menu-container {
-    height: 70%;
-    justify-content: space-between;
-    margin: 0px;
 }
 
 .mobile-menu-items {
@@ -222,6 +215,10 @@ body {
     background: var(--c-light);
     color: var(--c-dark);
     padding: 10px 15px;
+}
+
+.body-scroll-disable {
+    overflow: hidden;
 }
 
 
