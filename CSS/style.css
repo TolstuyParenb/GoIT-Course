@@ -713,7 +713,7 @@ body {
     padding: 0px 10px 0px 3px;
 }
 
-.conteiner-form {
+.callback-form-container {
     background: var(--c-dark);
     width: 100%;
     display: flex;
@@ -752,6 +752,10 @@ body {
     text-align: center;
     color: var(--txt-c-light);
     margin-bottom: 30px;
+}
+
+.callback-form-input-error {
+    border: 1px solid red;
 }
 
 

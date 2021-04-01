@@ -250,12 +250,12 @@
 
     <section class="callback-form">
         <div class="container">
-            <form action class="conteiner-form ">
+            <form action class="callback-form-container">
                 <h3 class="conteiner-title">/Are you minding [a project?]</h3>
                 <p class="conteiner-description">Leave a request to discuss the task and technical requirements</p>
-                <input class="conteiner-form-input" type="text" placeholder="Name">
-                <input class="conteiner-form-input" type="email" placeholder="Email">
-                <input class="conteiner-form-input" type="tel" placeholder="Phone">
+                <input class="conteiner-form-input" type="text" placeholder="Name" id="callback-form-input-name">
+                <input class="conteiner-form-input" type="email" placeholder="Email" id="callback-form-input-email">
+                <input class="conteiner-form-input" type="tel" placeholder="+380(__) ___ - __ - __" id="callback-form-input-phone">
                 <input type="submit" class="conteiner-form-submit accent-btn" value="Discuss the project  —">
 
             </form>
@@ -384,7 +384,7 @@
             </div>
         </div>
         <!-- MODAL FORM -->
-        <div class="modal  modal-request-received" id="request-received">
+        <div class="modal modal-request-received" id="request-received">
             <div class="request-received-container">
                 <i class="fas fa-times modal-close-btn "></i>
                 <h3 class="request-received-title">{Thanks}</h3>
@@ -574,6 +574,7 @@
     <script src="js/calculator.js"></script>
     <script src="js/project-modals.js"></script>
     <script src="js/modals.js"></script>
+    <script src="js/callback-form.js"></script>
 </body>
 
 </html>
